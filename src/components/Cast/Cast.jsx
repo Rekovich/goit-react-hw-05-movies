@@ -4,8 +4,7 @@ import { getMovieCredits } from 'services/moviesAPI';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
-  const { id } = useParams;
-
+  const { id } = useParams();
   useEffect(() => {
     async function getMovieInfo() {
       const movieCast = await getMovieCredits(id);
